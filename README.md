@@ -5,7 +5,7 @@
 [![Pytorch](https://img.shields.io/badge/pytorch-1.13.0-red?logo=pytorch)](https://pytorch.org/get-started/previous-versions/)
 🤗 Transformers 4.25.1
 
-## Natural Language-Code Search Task
+# 1. Natural Language-Code Search Task (Text-Code)
 
 - This task from [CodeXGLUE](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code)
 
@@ -32,3 +32,21 @@ python code/run_attack.py
 			--output_dir ./model_codesearchnet/checkpoint-best-aver 
 			--encoder_name_or_path microsoft/codebert-base 
 			--pred_model_dir ./model_codesearchnet/checkpoint-last/
+```
+
+# 2. Documentation Translation (Text-Text)
+
+- This task from [CodeXGLUE](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Text)
+
+## Train and Attack
+```
+cd Document_Translation
+
+### 1. fine-tune on translation code documentation task
+
+sh run-multi.sh
+
+### 2. attack
+
+python run_attack_from_json.py 
+```			
